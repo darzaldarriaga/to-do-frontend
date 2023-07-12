@@ -1,0 +1,14 @@
+.List-title {
+  padding-left: 15px;
+  border-bottom: 1px solid #42a5f5;
+}
+
+.List {
+  width: 100%;
+  overflow-y: auto;
+  max-height: 53vh;
+}
+
+.Task-checkbox {
+  padding: 5px;
+}
