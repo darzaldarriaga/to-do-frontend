@@ -39,7 +39,7 @@ const InfoDialog = ({
           { task.task ? task.task.toString() : '' }
         </Typography>
         <Grid container>
-          <Grid xs={6}>
+          <Grid xs={6} item={true}>
             <Typography gutterBottom variant="caption">
               This task was created on: <br/>
             </Typography>
@@ -51,7 +51,7 @@ const InfoDialog = ({
             </Typography>
           </Grid>
           {task.is_done && (
-            <Grid xs={6}>
+            <Grid xs={6} item={true}>
               <Typography gutterBottom variant="caption">
                 This task was finished on: <br/>
               </Typography>
