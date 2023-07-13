@@ -47,13 +47,13 @@ export default function App() {
    */
   useEffect(() => {
     if (!!term) {
-      fetch(`http://localhost:3005/api/v2/tasks/search/${true}/${term}`).then(
+      fetch(`https://darwin-to-do-api.onrender.com/api/v2/tasks/search/${true}/${term}`).then(
         response => response.json()
       ).then(
         data => setFinishedTasks(data)
       );
   
-      fetch(`http://localhost:3005/api/v2/tasks/search/${false}/${term}`).then(
+      fetch(`https://darwin-to-do-api.onrender.com/api/v2/tasks/search/${false}/${term}`).then(
         response => response.json()
       ).then(
         data => setTodo(data)
@@ -70,7 +70,7 @@ export default function App() {
   }, [task, isTaskInvalid]);
 
   const loadData = () => {
-    fetch("http://localhost:3005/api/v2/tasks/todo").then(
+    fetch("https://darwin-to-do-api.onrender.com/api/v2/tasks/todo").then(
       response => response.json()
     ).then(
       data => {
@@ -78,7 +78,7 @@ export default function App() {
       }
     );
 
-    fetch("http://localhost:3005/api/v2/tasks/finished").then(
+    fetch("https://darwin-to-do-api.onrender.com/api/v2/tasks/finished").then(
       response => response.json()
     ).then(
       data => {
@@ -93,7 +93,7 @@ export default function App() {
       return;
     }
 
-    fetch("http://localhost:3005/api/v2/tasks/", {
+    fetch("https://darwin-to-do-api.onrender.com/api/v2/tasks/", {
       method: 'POST',
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ task })
@@ -102,7 +102,7 @@ export default function App() {
   }
 
   const handleUpdate = (id, is_done) => {
-    fetch(`http://localhost:3005/api/v2/tasks/${id}`, {
+    fetch(`https://darwin-to-do-api.onrender.com/api/v2/tasks/${id}`, {
       method: 'PUT',
       headers: { "Content-type": "application/json" },
       body: JSON.stringify({ is_done })
@@ -111,7 +111,7 @@ export default function App() {
 
   const handleDialogResult = (dialogResult) => {
     if (dialogResult) {
-      fetch("http://localhost:3005/api/v2/tasks", {
+      fetch("https://darwin-to-do-api.onrender.com/api/v2/tasks", {
         method: 'DELETE'
       }).then(() => {
         loadData();

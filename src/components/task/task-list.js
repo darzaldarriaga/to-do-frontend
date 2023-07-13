@@ -24,7 +24,7 @@ const TaskList = ({
     <>
       <Typography variant='h5' className='List-title'>{listTitle}</Typography>
       <List dense className='List'>
-        {!!tasks.length && tasks.map((item, i) => {
+        {tasks && !!tasks.length && tasks.map((item, i) => {
           const { id, task, is_done } = item;
 
           return (
