@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# to-do-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements:
+
+1. Node.js (https://nodejs.org/en)
+
+Command
+### `npm install`
+will install all the packages required for the app to run.
+
+Then you should be able to run the following.
 
 ## Available Scripts
 
@@ -17,7 +25,6 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
@@ -27,4 +34,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Additional feature
+
+Long press on the list item will show when the task was create and/or finished.
